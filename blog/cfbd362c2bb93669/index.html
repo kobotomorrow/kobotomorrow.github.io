@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+
+    <style>
+      :root {
+        --accent-color: #05a081;
+        --accent-color-light: #82d0c0;
+        --accent-overlay-color: #fff;
+        --body-bg: #fff;
+        --body-color: #000;
+        --heading-color: #000;
+        --table-bg-even: #f3f3f3;
+        --table-border-bottom: #dddddd;
+      }
+      
+    </style>
+
+    <meta name="theme-color" content="#05a081" />
+
+    
+      <link rel="icon" href="https:&#x2F;&#x2F;kobotomorrow.github.io&#x2F;processed_images&#x2F;icon.8bb7562e91f2c833.jpg" />
+      <link rel="apple-touch-icon" sizes="48x48" href="https:&#x2F;&#x2F;kobotomorrow.github.io&#x2F;processed_images&#x2F;icon.8bb7562e91f2c833.jpg" />
+      <link rel="apple-touch-icon" sizes="72x72" href="https:&#x2F;&#x2F;kobotomorrow.github.io&#x2F;processed_images&#x2F;icon.5324ad24c76653f9.jpg" />
+      <link rel="apple-touch-icon" sizes="96x96" href="https:&#x2F;&#x2F;kobotomorrow.github.io&#x2F;processed_images&#x2F;icon.ad3476c585276887.jpg" />
+      <link rel="apple-touch-icon" sizes="144x144" href="https:&#x2F;&#x2F;kobotomorrow.github.io&#x2F;processed_images&#x2F;icon.1f452bf44b399811.jpg" />
+      <link rel="apple-touch-icon" sizes="192x192" href="https:&#x2F;&#x2F;kobotomorrow.github.io&#x2F;processed_images&#x2F;icon.d4bcfcb8e74e5248.jpg" />
+      <link rel="apple-touch-icon" sizes="256x256" href="https:&#x2F;&#x2F;kobotomorrow.github.io&#x2F;processed_images&#x2F;icon.0707f6fc31d6a3f9.jpg" />
+      <link rel="apple-touch-icon" sizes="384x384" href="https:&#x2F;&#x2F;kobotomorrow.github.io&#x2F;processed_images&#x2F;icon.c1f191193f889b25.jpg" />
+      <link rel="apple-touch-icon" sizes="512x512" href="https:&#x2F;&#x2F;kobotomorrow.github.io&#x2F;processed_images&#x2F;icon.ca1111db3cabab66.jpg" />
+      
+    
+
+    
+
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary">
+
+    
+
+    
+
+    
+      
+        <meta name="description" content="koborrow&#x27;s page." />
+        <meta name="twitter:description" content="koborrow&#x27;s page.">
+      
+    
+
+    
+      <meta name="twitter:title" content="Remote Repositories を使うとGithub上のコードの参照が捗る">
+    
+
+    
+      <link rel="prerender" href="&#x2F;" />
+    
+      <link rel="prerender" href="&#x2F;blog&#x2F;" />
+    
+
+    <link rel="prefetch" href="https:&#x2F;&#x2F;kobotomorrow.github.io&#x2F;processed_images&#x2F;icon.638905c23809b86a.jpg" />
+
+    <title>
+      
+        
+          Remote Repositories を使うとGithub上のコードの参照が捗る
+        
+      
+    </title>
+
+    
+    
+      <link rel="stylesheet" href="https://kobotomorrow.github.io/main.css">
+    
+    
+  
+
+  
+
+  
+    <link rel="prerender"  href="https://kobotomorrow.github.io/tags/software/">
+  
+    <link rel="prerender"  href="https://kobotomorrow.github.io/tags/vscode/">
+  
+
+  </head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HM7VR77TPX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-HM7VR77TPX');
+  </script>
+  <body>
+    
+      <header>
+        <a class="profile-icon" href="/">
+          <img src="https:&#x2F;&#x2F;kobotomorrow.github.io&#x2F;processed_images&#x2F;icon.638905c23809b86a.jpg" alt="profile picture">
+        </a>
+        <nav>
+          
+            <a href="&#x2F;">Home</a>
+          
+            <a href="&#x2F;blog&#x2F;">Blog</a>
+          
+        </nav>
+      </header>
+    
+    <main>
+    
+  <div class="post-title">
+    <h1>Remote Repositories を使うとGithub上のコードの参照が捗る</h1>
+    <small>
+      October 07, 2023
+      
+        - 
+        <span class="tags">
+          
+            <a href="https://kobotomorrow.github.io/tags/software/">Software</a>
+          
+            <a href="https://kobotomorrow.github.io/tags/vscode/">VSCode</a>
+          
+        </span>
+      
+    </small>
+  </div>
+
+  <div>
+    <h1 id="what">What</h1>
+<p>最近、OSSのコードを読むときに、手軽に読む術ないかと探していたところ、Remote Repositoriesという拡張機能があることを知った。Remote Repositoryは、GithubとAzule DevOpsのリポジトリを検索して、手元のVSCode上で開くことができるようにするVSCodeの拡張機能。2年ほど前にはすでにリリースされていたらしい。もともとはGithub Repositoriesという拡張機能の実装の一部だったと拡張機能のdescriptionに記載されている。私が使いたかったのはGithubのみだったので、Github Repositoriesとどっちをインストールしたらいいものかと思いつつ、Remote Repositoryをインストールしたところ、Github RepositoriesとAzure Repositoriesも一緒にインストールされた。</p>
+<h1 id="why">Why</h1>
+<p>ちょっと触ってみて、以下のケースで有用そうだなと思った。</p>
+<ul>
+<li>普段利用しているライブラリの実装をさっと見たいとき</li>
+<li>レビュー時にPull requestを参照したいとき</li>
+</ul>
+<p>また、<a href="https://vscode.dev/">vscode.dev</a>で同じ機能を利用することができるようだが、手元のVSCodeで全て完結できる点に、大きなメリットがあると感じた。</p>
+<h1 id="how">How</h1>
+<p>導入方法は、Remote Repositoriesをインストールして終わり。あとはサイドバーの <code>リモートエクスプローラー &gt; リモートリポジトリ</code> から開いたり閉じたり。私が触った限り、CLIは使えないため、ブランチの切り替えやコミットはVSCodeのGUI上で行う。(Windows11で実行しています)</p>
+<p>その他の注意点としては、下記の通り。</p>
+<ul>
+<li>参照するリポジトリは、コミット前の変更差分がない限りは、自動的に最新状態に更新される</li>
+<li>仮想ワークスペース上で変更をコミットすると、自動的にリモートリポジトリにプッシュされる(権限がない場合は、さすがにプッシュできないと思うが、基本参照目的で使っている + なんとなく怖いので試せていない)</li>
+<li>あくまで仮想ワークスペースで動いているため、利用したい拡張機能はそのままでは利用できず、有効にするための設定を明示的に入れる必要がある
+<ul>
+<li><a href="https://code.visualstudio.com/blogs/2021/06/10/remote-repositories">公式のブログ</a>によると、<code>setting.json</code>に以下の設定を入れる必要があるそう</li>
+</ul>
+</li>
+</ul>
+<pre data-lang="settings.json" class="language-settings.json "><code class="language-settings.json" data-lang="settings.json">&quot;extensions.supportVirtualWorkspaces&quot;: { &quot;&lt;extensionID&gt;&quot;: true }
+</code></pre>
+<p>とはいえ、仮想ワークスペースということで正常に動作しない拡張機能もあるらしい。</p>
+<blockquote>
+<p>Keep in mind that an extension might not be implemented to handle a virtual workspace without access to the local file system, and so the extension might not work as expected.</p>
+</blockquote>
+
+  </div>
+
+  <hr class="footer-rule" />
+
+  <div class="related-container">
+
+    
+
+    
+
+  </div>
+
+
+    </main>
+    <footer class="footer-page">
+    
+      
+    
+    </footer>
+  </body>
+</html>
